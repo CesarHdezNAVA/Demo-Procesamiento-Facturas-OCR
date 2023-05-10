@@ -1,0 +1,229 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="add_invoice_in_demo_erp" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,2532" sap2010:WorkflowViewState.IdRef="add_invoice_in_demo_erp_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sg="clr-namespace:System.Globalization;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Globalization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="add_invoice_in_demo_erp" sap:VirtualizedContainerService.HintSize="594,2467" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - My ASP.NET Application" sap:VirtualizedContainerService.HintSize="552,2375" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c6403cbf-066a-4e3d-9f40-12496f446330" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,2159" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Invoices'" sap:VirtualizedContainerService.HintSize="476,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://localhost:62769/Home" DesignTimeRectangle="570, 111, 81, 50" ElementType="Text" FriendlyName="'Invoices'" FullSelectorArgument="&lt;webctrl aaname='Invoices' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Invoices' tag='A' type='' class='' check:innerText='Invoices' /&gt;" Guid="6ff300e7-dfcc-4aa0-98e2-b5c72cb8630c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAA2CAYAAAC2ldWuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHWSURBVHhe7ZUxboQwEEUpqXMEjsF2OQJbpkoHd1ikNCl9BF+RK0wA22AbQ7LCX2SlXzwJM57BPMamePv4FJKX4v3rW0heiqqqhOSFUgFQKgBKBUCpACgVAKUCoFQAlAqAUgFQKgBKBUCpACgVAKUCoFQAlAqAUgFQKgBKBZBP6r0XrXtpUrGc3DpRWkl3S8T+Ca8n9QWASW0eWlTbSa/1eN/Q39eYfjRBft0q714tnVrzgrmbTm2CZ4R1ozqqk3qJ2XUsufkaAipVey8/S3PxTVeblzfSrYhYsBsHUk1MtXUw14zjWPgx5/V4kuPxGbBSdzvMdJfrXBPbE+7iNte/Ts11TLGNpOm5JjenxJiLpCa6ZqeDDKsMv86RmDm2bG0ftwb/2FjXlYPLpK7zzTZ1XZtV6p860R4vs9ydrn+S66S6I2D8mS1bfyKqs8n1r1NzHUexJHY97kg6wYVS7ZypQ4KOsp2z5EbjoM7RzyiuM+KtcdPJT3+EfS6VanJCKQZ/S/5Wxz8bR4IPFMUCadEz4rWdIJ9UskCpACgVAKUCoFQAlAqAUgFQKgBKBUCpACgVAKUCoFQAlAqAUgFQKgBKBUCpACgVAKUCKMqyFJKXYhgGITkZ5AdHOg7waz5meQAAAABJRU5ErkJggg==" InformativeScreenshot="45ef34b76f4b476697e2e40c3b0a78e0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - My ASP.NET Application' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="503, 111, 67, 50" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl aaname='Home' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home' tag='A' type='' class='' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAA2CAYAAACVzoR7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFjSURBVGhD7dQ7boNAFEZhStdZAsvAXZYAZap0Zg9GcpNylsAW2cINz3hwLn8eHpGHTnEk4AIyH2Oyh6dnI7/s8fJi5JfleW7kB44IHBE4InBE4IjAEYEjAkcEjggcETgicETgiMARgSMCRwSOCBwROKJEOIXVobWmcmZVY23bWHl7/A8EjuhHcIpT6I+1c/GstKYNVle1hWUeaivG48v5/fx4vdd0/2W28Ru+2e44E8zW/owwgkT7EUh57vfP5bj9Dv44oN7g3VFSnPgNrls//BpxujacCne+whgaQEY8/4WM2PH5d7Tvytl4swOAwplm87E3nGVVOYHjrcK07fzN8R7o47+VjxNfdz0/Zb/yg/w5nHl7tRLTgu2OMzSBLN+IePZFnL71vdKupEQ4/zNwROCIwBGBIwJHBI4IHBE4InBE4IjAEYEjAkcEjggcETgicETgiMARZYfDwcgv67rOyKuzV8CCf4JFFR+GAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Sequence DisplayName="Add data from Excel" sap:VirtualizedContainerService.HintSize="476,1869" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Hoja1" WorkbookPath="Reports\Data.xlsx" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1586" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1470" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="s:DateTime" Name="dateInvoice">
+                          <Variable.Default>
+                            <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="DateTime.Parse(CurrentRow(&quot;Date&quot;).ToString,new CultureInfo(&quot;es-MX&quot;))" />
+                          </Variable.Default>
+                        </Variable>
+                        <Variable x:TypeArguments="sg:CultureInfo" Name="cultureInfo">
+                          <Variable.Default>
+                            <mva:VisualBasicValue x:TypeArguments="sg:CultureInfo" ExpressionText="new CultureInfo(&quot;en-US&quot;)" />
+                          </Variable.Default>
+                        </Variable>
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Create New'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices" DesignTimeRectangle="398, 226, 74, 16" ElementType="Text" FriendlyName="'Create New'" FullSelectorArgument="&lt;webctrl aaname='Create New' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create New' tag='A' type='' class='' check:innerText='Create New' /&gt;" Guid="a7dea40b-fcfa-4843-857c-9195feb1b2f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAUCAYAAAAjvwuMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAITSURBVFhH7ZUxbsMwDEV7r1zLUy+RwXfwBYxuQTbPGYpMuUGQnEEVaVr6ImnHFdJO+oCQyJKoz0c6+QhNVWrgKtXAVaqBq1QDVykH3COMx69w+MyjOz9k7W/0PJ/CYbjJ7LcSv8dLeMqTpOsU/U/hW6bvVAnufgmdAXULPQGsTuy13gLOK/D/gJsNuN3FQE9hvNOEQE5hpGQJaKq0AF6GAvE9wBqsM7TlGXRN8Tzd7Wn23Q8ESe0z4NTbpLz3V56w2C/mQAzAXwZXwNmS14H64rIIbAJfJU4o79cdx3Ozf61zBFyM5d+znLONgXDoe16THCEWecKzGdzutrbV0YmzuBBr8coY5XlaswUsE0NlcEvctA9zou8IlQV34Tp31xT64+KD7ig9vQUcV44qZEYZjwHBuguOgWOMPF6Di+I8AIZ40HfnIXuh0LSX7qK8OC6DLKFXv6oGnO44UDa9gCxjWHB7fCxS4KLYDyWqwZmOQ+U4CRidJ1/xUxdt359DkagFt23KJrYJzom/rfX4XXy9UrEA4prIR3e+xLOyTzptHGwhAVwUV1vDm01kMF5iYhTOZZi6IPOcOtAHJ/MiyS2YHrgoBoVdLvfim6FhLmdUrl5TlOBYshmGB9IYFejpHF6m1vqrSiKt5yT076YPjbQCLmqOYQuQ4+IaaV7HfNd+hhxwTXvUwFWqgatUA1epBq5KIfwA+hLzwTiAek4AAAAASUVORK5CYII=" InformativeScreenshot="d734a20eb93dde4519c2e5df5a8cdad4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="398, 181, 1140, 33" ElementType="Text" FriendlyName="'Invoices'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='' aaname='Invoices' check:innerText='Invoices' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'InvoiceNumber'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Text="[CurrentRow(&quot;Invoice&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices/Create" DesignTimeRectangle="593, 285, 280, 34" ElementType="InputBox" FriendlyName="'INPUT InvoiceNumber'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control text-box single-line' aaname='InvoiceNumber' /&gt;" Guid="36c6ad64-f4d0-4a47-9c1d-d4f3831fc299" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVHhe7d0xbsJAFEXR7H9tFiuggwIXuIIKo4mexVggJUUM+dU50ivAU1/Z1Xw1gCKCA5R5Cc71em37/b7tdrs2DIOZ2aalIWlJmvJsDU4e5NDxeGzn87lN02RmtmlpyOFwWJryHJ01OKlRYpOH8zy3+/1uZrZpt9ttaUmakrZ0a3BSosvlshwGeFda0r+cujU4+e5KlQA+JU1JW7qX4Hi7AT4pTREcoITgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlPk1OLmO082bwCelKT9e9ZsLx0+n0+MXwPvGcVza0q3B6ZeO58A8z49/Af4uDUlL0pS0pVuDE3mQGuVQvrvMzLYsDUlLnmMTL8EB+E+CAxRp7Rs1aFBzEFYOnwAAAABJRU5ErkJggg==" InformativeScreenshot="5dd3355094b00a34f8b9c7848d9440ef.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="383, 285, 195, 27" ElementType="Text" FriendlyName="'InvoiceNumber'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='control-label col-md-2' aaname='InvoiceNumber' check:innerText='InvoiceNumber' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAfCAYAAABTaNmEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKKSURBVHhe7ZhrbqswEEbvnlhX2ArKTshKqiyjUvbANdhjj8ceVQW3zY9zpJEa1y/MdyDtvw0AuiAHgANyADggB4ADcgA4IAeAA3IAOCAHgANyADggB4ADcgA4IAeAA3IAOCAHgANyjOBz3eZp2qb7MzX8ArLmbd1eqek8z23Z5wq1fKSmg9e23vb2eVs/U9MP8Lz31v57kGMEfyHHUIoc07SETwJywFWsHOqpvqYbv9f8SM/4j6X+vJPatGASmlgmoL03h8yRyoatnk9LoOUIlffQytEGOY2VfeTrCNd+jN0rraX2p689z/lI16THCHK9qfT412OObfcl9RkjM3KMwJOjKblpJlB7iwldHeRSOZRWDiOG7d+dL69v5Mj7vCCHrdtszqSdsymZ0zlP2YPIkUud6xWQYwSuHDZkNqxGFnla5vHq6Smhs4E5Prfzlyf4PkMrowQq9lfrV+tckcNei4zxziJUfmPJfuK69V536jWzHOr6RoAcI/DkcMMYSCE6vh7onwPSt/ralUNlQnesocJ99DWogNqKa+jxJbzz43lejiboZW92jvpBEdF9sjxNxTn753Ud5BjBGTlUqOLfJSocRpbIz8hRvVns3GFP81dy2Gs9LYc+m7rNl6N+syDHOyIB+ZYc5qarviWcKuwSOulXraGf9mmW6vdFxH582gDLfmO1csg6uZ/MfUGOdkwdfn12GuR4Z07KUSRob6z3tMzj7RoSSlNNAKuS0LcBDjvOwmk5amlUjZDDlsypzqmqtAZyvDNn5cgBLOHT1KExfTprWEG+Eq7spSdHIM+n19bS7HOksQPk+M6/cntnixwAvwRyADggB4ADcgA4IAeAA3IAOCAHQJdt+w+2RRglJurKnQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Text="[dateInvoice.ToString(&quot;dd/MM/yyyy&quot;)]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices/Create" DesignTimeRectangle="593, 334, 280, 34" ElementType="InputBox" FriendlyName="'INPUT Date'" FullSelectorArgument="&lt;webctrl id='Date' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Date' tag='INPUT' type='text' class='form-control text-box single-line' aaname='Date' /&gt;" Guid="6d4d6de0-881c-4794-86d3-036dd966df16" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVHhe7d0xbsJAFEXR7H9tFiuggwIXuIIKo4mexVggJUUM+dU50ivAU1/Z1Xw1gCKCA5R5Cc71em37/b7tdrs2DIOZ2aalIWlJmvJsDU4e5NDxeGzn87lN02RmtmlpyOFwWJryHJ01OKlRYpOH8zy3+/1uZrZpt9ttaUmakrZ0a3BSosvlshwGeFda0r+cujU4+e5KlQA+JU1JW7qX4Hi7AT4pTREcoITgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlPk1OLmO082bwCelKT9e9ZsLx0+n0+MXwPvGcVza0q3B6ZeO58A8z49/Af4uDUlL0pS0pVuDE3mQGuVQvrvMzLYsDUlLnmMTL8EB+E+CAxRp7Rs1aFBzEFYOnwAAAABJRU5ErkJggg==" InformativeScreenshot="0221b1cc3fa31fc0ad4fe865ef19d90e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="383, 334, 195, 27" ElementType="Text" FriendlyName="'Date'" FullSelectorArgument="&lt;webctrl aaname='Date' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Date' tag='LABEL' type='' class='control-label col-md-2' check:innerText='Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAfCAYAAABTaNmEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVHhe7dlBboMwEEbh3Ilzhaug3IScJOIYkXKHCQ5jaIz/JlBmU71PmkUobje82rQnA1BFHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIBAHIh1761tGmtW01p/93u+deusuQz+IR5xIJaMY5ru5vd9ksJIa4gD/0aO49zbwy8lj2vrgXSWH/flmk9ek8OYZ1kzXOrXj0AciCXiGFOw/pweaD9erQKYpr2Oq0Qc72H4rH7OfsSBWDKO5eGuHq3KY9TqWDVYV3zfvPN8fVT7gDgQa2sc5TuKiqO878e8dpsDEAdibT1WqRg2xDHf80fEgVgqjvyw+/VyF5lfzlUclWPV0YgDsX77DT9OjqH6cp2mjOM1025TX7Pj/ycCcSCWjKN8iH0nmL+Wj135z7P58/vaMpCjXsYT4gAE4gAE4gAE4gAE4gAE4gAE4gCqzJ6JxrDJlQBWowAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Text="[CurrentRow(&quot;Description&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices/Create" DesignTimeRectangle="593, 383, 280, 34" ElementType="InputBox" FriendlyName="'INPUT Description'" FullSelectorArgument="&lt;webctrl id='Description' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Description' tag='INPUT' type='text' class='form-control text-box single-line' aaname='Description' /&gt;" Guid="f84ad731-b5bd-4080-b660-14a81a6bbe5f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVHhe7d0xbsJAFEXR7H9tFiuggwIXuIIKo4mexVggJUUM+dU50ivAU1/Z1Xw1gCKCA5R5Cc71em37/b7tdrs2DIOZ2aalIWlJmvJsDU4e5NDxeGzn87lN02RmtmlpyOFwWJryHJ01OKlRYpOH8zy3+/1uZrZpt9ttaUmakrZ0a3BSosvlshwGeFda0r+cujU4+e5KlQA+JU1JW7qX4Hi7AT4pTREcoITgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlPk1OLmO082bwCelKT9e9ZsLx0+n0+MXwPvGcVza0q3B6ZeO58A8z49/Af4uDUlL0pS0pVuDE3mQGuVQvrvMzLYsDUlLnmMTL8EB+E+CAxRp7Rs1aFBzEFYOnwAAAABJRU5ErkJggg==" InformativeScreenshot="3b6ad93f22ff9500d0d070715df7a974.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="383, 383, 195, 27" ElementType="Text" FriendlyName="'Description'" FullSelectorArgument="&lt;webctrl aaname='Description' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Description' tag='LABEL' type='' class='control-label col-md-2' check:innerText='Description' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAfCAYAAABTaNmEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIOSURBVHhe7ZgBbgIhEEV7J8+lV9l4k/UkxmOYeAcKLrAw8Jut2jbU95JJ2rIDmPy3YD8cAHRBDgABcgAIkANAgBwAAuQAECAHgAA5AATIASBADgABcgAIkANAgBwAAuQAECDHEFzctNu5Xaemc3zkz0h7m/xP27mdDu5wusXfHpvjp0GOIdByhFpDNgZBjBH2jRxDIN6s5ykKcnDzNf7NinQ07+LcE2s/uzqiuj+H+ji5w308rGv2dp2XMT/vfIxzhJ4oQpoj1339/ue7FP31ZywFm4v91s88C3IMgZDDkwK0XK9MsGPlN3QKrq0sQL8/jW8KtlrDV9jjVjlqMdZK18hmnlSN7I+DHEOg5VjfoD4S8VRYrys3N++LvhRce5pEcuAaWZb+PF4FUMmxvsXtvNWe76g5is+bTry4drOXXs+TIMcQbJMjB6apFNQky1prQP0q1SnU0oY6IIJdCRifMcFWcvTXqUVvnzEvgheAHEOg5SgDreWwgU/zxYqhfakcvdNloxztCRhADugi5LBXiW6oviIFajlZslw52P3xTXL80rUKOd6eFJ5+tSEzlcKeAqbGVb8MdUAFu63+l+nQZ+bwbP1Cjhxvj5ajvQLZZ01YGkFsmEx/Fuebcvi+3r9yF8o1Qp+ZI1ILsp5EAeSA8SjkKHUYEeSA14IcAALkAPj/IAeAADkABMgB0MW5T8KU7rlMqkwWAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Text="[CurrentRow(&quot;Amount&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices/Create" DesignTimeRectangle="593, 432, 280, 34" ElementType="InputBox" FriendlyName="'INPUT Amount'" FullSelectorArgument="&lt;webctrl id='Amount' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Amount' tag='INPUT' type='text' class='form-control text-box single-line' aaname='Amount' /&gt;" Guid="efcfad68-0755-4cc2-98ab-feda6e3d9510" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVHhe7d0xbsJAFEXR7H9tFiuggwIXuIIKo4mexVggJUUM+dU50ivAU1/Z1Xw1gCKCA5R5Cc71em37/b7tdrs2DIOZ2aalIWlJmvJsDU4e5NDxeGzn87lN02RmtmlpyOFwWJryHJ01OKlRYpOH8zy3+/1uZrZpt9ttaUmakrZ0a3BSosvlshwGeFda0r+cujU4+e5KlQA+JU1JW7qX4Hi7AT4pTREcoITgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlBEcoIzgAGUEBygjOEAZwQHKCA5QRnCAMoIDlPk1OLmO082bwCelKT9e9ZsLx0+n0+MXwPvGcVza0q3B6ZeO58A8z49/Af4uDUlL0pS0pVuDE3mQGuVQvrvMzLYsDUlLnmMTL8EB+E+CAxRp7Rs1aFBzEFYOnwAAAABJRU5ErkJggg==" InformativeScreenshot="fe0ef85b42c426ade324cc676f250cb5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="383, 432, 195, 27" ElementType="Text" FriendlyName="'Amount'" FullSelectorArgument="&lt;webctrl aaname='Amount' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Amount' tag='LABEL' type='' class='control-label col-md-2' check:innerText='Amount' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAfCAYAAABTaNmEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVHhe7djRbYMwFEDR7sRcYRUrm5hJEGNEYgcXYz/b2Lw2EKGk6j2SP0ICzce74ObLAdhFHICCOAAFcQAK4gAUxAEoiANQEAegIA5AQRyAgjgABXEACuIAFMQBKIgDG/PQu67r1mXGePCP8N+9H+b46nXEgcLs7C2Esa77FI9/PomaOHCN0cQojDNrIMZt85B4emeH+Nk0kGVY2nn770/3cDw/qabw9292OXPxsK6Pr238rF8SQvm0W5ec9yLiQFIOaTuwXj3kspbtTH08PXX0c+wjfOLpOJoVrkEcuFgcSLmrp6dIeY/Pgy53bRnsNJBynvZ6kYY5Xvv5OCSo/D3kHLZVuE4TQxXLSoYy3/WboSy2QP7I/hNoO/xPx7ETGHHgcukJsLPywB2Pox7i4Jc46hiIA28jw6etNJTH4ziyrZJrpPeJA+9WD2smW6t6r38gjnROvdprNOtEHGHVv5adQxz/Xh7e7dYn2N7Vz8Th1YH8/FOvGY//z5FD9os4gEsRB6AgDkBBHICCOAAFcQAK4gB2OfcNiq8Cm76skj8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c6403cbf-066a-4e3d-9f40-12496f446330" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:62769/Invoices/Create" DesignTimeRectangle="593, 481, 68, 34" ElementType="Button" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-default' aaname='Create' check:text='Create' /&gt;" Guid="d5e1529a-e260-4005-a5ee-910b4e3cdc6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAmCAYAAABnE91tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVGhD7ZpJjsIwEEX7TjkXuUrETcI9EIg9FwBlyw6pmu8p5SEpBkc9pJ7khYc4rkfZLOIvUmZRQQKRoNvtRufzmQ6HA+33+1UVxIzY4YATBKEDg67XK93vd9e6HhAzYocDLikIgj0MWDtwABeeIAjm1pg5KXAAF54gCPtQsXAXKqiAChJQQQIqSEAFCaggARUksICggfpNQ00zlnY3uL5lGHYtNduTq9WlrqBLT20m5EQdRC0UAPgjgmzmFLPFiGupv6ACYR31CAriNv3jSd/OMi8J+LRlfazfyPFtYa6kPbz7deoJiiTMUcoo29YdXTWRbeSw4OnYmcD9+DSDTD0b3z3e8jr1BD29iFRGHqDBCJ+aL54jfh59+Q8Fye+chb9CULZ9Qonni7fNhCB3DvJxvvysoBe3WCYozSDGKMYLm8mgp9fxHPUEJedGDA8oF2QC5GdGhJ2Xj58VVJj/EyoKeuDSO5ZkF5z+W5UC5s+N0lLxto6MKgty9Wh7vi+triCDE8JKSVi22PTs4BmV9HVHJyk7d0Yp6bn2bkYtIOh/oYIEVJCAChJQQQIqSEAFCagggaIg/fRsmfz0rJcXLJOXF/T6i3D9BaAD9jAI+3BNBTEjdi4HRIKUHBU0C9E3YLgF3s4de5gAAAAASUVORK5CYII=" InformativeScreenshot="5e3c2092c78655f3f6b635cf82084d12.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - My ASP.NET Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="606, 492, 44, 15" FriendlyName="'chrome.exe Create'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAPCAYAAACfvC2ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEiSURBVEhL7ZXbDYQgEEXtibqkFWInWImxDBN7mJUBZF666278MNmb8MFr5swFtIOHiQCvEHsHzrXmx7XM3aN19OCGufQ+UwZeIngFOENI4BcDXtGXwNlZ000sxENcUicVECCmJKmQPm476zg5GQEwD2SOzCNsHdtjifE9d1PHoc5kOZ7HwlS6oniEJTAwBQSp66XD2Ffrw5alqbMGbUk4nRCFBhzF4zH4/jSnjUtF09P/CVgd9954PH7MB8DlHdF1tXHgi1dCAUuHiRpoLeDE4Q85zh8dS6CBMSG9c0w5Ll1/CmzEt/T+sya+BhYA3deKkEbkfnLcBi59dp10TvLjKICkWQUoB+Tdo46LuTAVaHVvG6R8FzIfAX6G/sB362HAAC8NJyiWm952mAAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="890afcaf23881971464001e9281ea311.png" Selector="&lt;html app='chrome.exe' title='Home Page - My ASP.NET Application' /&gt;" Url="http://localhost:62769/Home" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
