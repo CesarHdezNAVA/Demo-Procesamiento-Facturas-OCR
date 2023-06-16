@@ -1,0 +1,114 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MainFlowchart.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "path&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/procesamiento_pdf.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TotalCLP&Sequence_9",
+        "TotalCRC&Sequence_8",
+        "TotalUSD&TryCatch_3",
+        "TotalUSD&TryCatch_2",
+        "tipo&Sequence_2",
+        "total&Sequence_2",
+        "index&Sequence_1",
+        "formCollectionResult&Sequence_2",
+        "table&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_path"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/Call_Azure.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "endPoint&Sequence_1",
+        "apiKey&Sequence_1",
+        "modelId&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_path",
+        "out_form_collection_result"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Interface/select_files_form.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "output_form_data&Sequence_1",
+        "json_form_data&Sequence_1",
+        "path&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_path"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/save_data_excel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dataTable&Sequence_1",
+        "dt&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_currency",
+        "in_date",
+        "in_total",
+        "in_invoice_number",
+        "in_list_form"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/extract_data_from_table.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dataTable&Sequence_1",
+        "description&Sequence_1",
+        "amount&Sequence_1",
+        "oldRowIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_list_form",
+        "out_data_table"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/delete_old_file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fileExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

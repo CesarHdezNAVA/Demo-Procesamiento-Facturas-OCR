@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Call_Azure" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:aafm="clr-namespace:Azure.AI.FormRecognizer.Models;assembly=Azure.AI.FormRecognizer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Call_Azure" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:aafm="clr-namespace:Azure.AI.FormRecognizer.Models;assembly=Azure.AI.FormRecognizer" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_path" Type="InArgument(x:String)" />
     <x:Property Name="out_form_collection_result" Type="OutArgument(aafm:RecognizedFormCollection)" />
@@ -6,10 +6,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,538</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1244,530</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Call_Azure_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="26">
+    <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +36,11 @@
       <x:String>System.Reflection</x:String>
       <x:String>Azure.AI.FormRecognizer.Models</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -61,27 +62,57 @@
       <AssemblyReference>Azure.AI.FormRecognizer</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Call_Azure" sap:VirtualizedContainerService.HintSize="400,276" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Call_Azure" sap:VirtualizedContainerService.HintSize="496,295" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="https://formcesar.cognitiveservices.azure.com/" Name="endPoint" />
-      <Variable x:TypeArguments="x:String" Default="fadb073569d34b889a6124f02e9b01f2" Name="apiKey" />
-      <Variable x:TypeArguments="x:String" Default="afe248e7-a869-4d0a-b4b4-96c0115dd889" Name="modelId" />
+      <Variable x:TypeArguments="x:String" Default="https://formdemomulti.cognitiveservices.azure.com/" Name="endPoint" />
+      <Variable x:TypeArguments="x:String" Default="a748fbd5c1b4420d8177e853f3f6b56a" Name="apiKey" />
+      <Variable x:TypeArguments="x:String" Name="modelId">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">9d6a3ed5-2191-4c4a-b4e6-7ff216db870e</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim credential As Azure.AzureKeyCredential&#xD;&#xA;Dim client As Azure.AI.FormRecognizer.FormRecognizerClient&#xD;&#xA;Dim fileStream As Stream&#xD;&#xA;&#xD;&#xA;credential = New Azure.AzureKeyCredential( apikey )&#xD;&#xA;client = New Azure.AI.FormRecognizer.FormRecognizerClient(New Uri(endpoint),credential)&#xD;&#xA;fileStream = New FileStream(path, FileMode.Open, FileAccess.Read)&#xD;&#xA;formCollection = client.StartRecognizeCustomForms( modelID, fileStream ).WaitForCompletionAsync.Result" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="338,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
-      <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="endpoint">[endPoint]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="apikey">[apiKey]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="modelID">[modelId]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="path">[in_path]</InArgument>
-        <OutArgument x:TypeArguments="aafm:RecognizedFormCollection" x:Key="formCollection">[out_form_collection_result]</OutArgument>
-      </ui:InvokeCode.Arguments>
-    </ui:InvokeCode>
+    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim credential As Azure.AzureKeyCredential&#xA;Dim client As Azure.AI.FormRecognizer.FormRecognizerClient&#xA;Dim fileStream As Stream&#xA;&#xA;credential = New Azure.AzureKeyCredential( apikey )&#xA;client = New Azure.AI.FormRecognizer.FormRecognizerClient(New Uri(endpoint),credential)&#xA;fileStream = New FileStream(path, FileMode.Open, FileAccess.Read)&#xA;formCollection = client.StartRecognizeCustomForms( modelID, fileStream ).WaitForCompletionAsync.Result" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+          <ui:InvokeCode.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="endpoint">[endPoint]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="apikey">[apiKey]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="modelID">[modelId]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="path">[in_path]</InArgument>
+            <OutArgument x:TypeArguments="aafm:RecognizedFormCollection" x:Key="formCollection">[out_form_collection_result]</OutArgument>
+          </ui:InvokeCode.Arguments>
+        </ui:InvokeCode>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="ex" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Ocurrio un error al hacer el llamado al API: &quot;+ex.ToString]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
   </Sequence>
 </Activity>

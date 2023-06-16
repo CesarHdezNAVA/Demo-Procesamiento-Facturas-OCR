@@ -4,8 +4,6 @@
   "main": "MainFlowchart.xaml",
   "dependencies": {
     "Azure.AI.FormRecognizer": "[3.1.1]",
-    "GrantThornton.ProgressBar": "[1.0.14]",
-    "NugProgressBar": "[1.0.2]",
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Form.Activities": "[2.0.2]",
     "UiPath.Mail.Activities": "[1.15.2]",
@@ -25,6 +23,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
